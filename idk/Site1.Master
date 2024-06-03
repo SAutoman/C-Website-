@@ -1,0 +1,53 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="idk.Site1"  ClientIDMode="Static"%>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <link href="Styles/masterpage.css" rel="stylesheet" />
+    <header>
+        <h1>Metallic Wonders</h1>
+        <nav>
+            <ul>
+                <li class="logo">
+                    <a href="Default.aspx">
+                        <img src="images/vector-house-icon-outline-house-home-page-icon-clip-art-svg_769314-401.jpg" alt="Logo" />
+
+                    </a>
+
+                </li>
+                <%  if ((bool)Session["Login"])
+                    {
+                        Response.Write("<li><a href=\"gold.aspx\">Gold</a></li>\r\n<li><a href=\"iron.aspx\">Iron</a></li>\r\n<li><a href=\"Aluminum.aspx\">Aluminum</a></li>\r\n<li><a href=\"copper.aspx\">Copper</a></li>\r\n<li><a href=\"bronze.aspx\">Bronze</a></li>\r\n<li class=\"dropdown\">\r\n    <button class=\"dropbtn\">Features</button>\r\n    <div class=\"nav-links\">\r\n        <a href=\"gallery.aspx\">Gallery</a>\r\n        <a href=\"Logout.aspx\">Logout</a>\r\n        <a href=\"Questionnaire.aspx\">Questionnaire</a>\r\n\r\n    </div>\r\n\r\n</li>");
+                    } else
+                    {
+                        Response.Write("<li class=\"dropdown\">\r\n    <button class=\"dropbtn\">Features</button>\r\n    <div class=\"nav-links\">\r\n        <a href=\"Login.aspx\">Login</a>\r\n     <a href=\"Register.aspx\">Register</a>\r\n    </div>\r\n\r\n</li>");
+                    }
+
+                    if ((bool)Session["isAdmin"])
+                    {
+                        Response.Write("<li><a href='Admin.aspx'>Admin</a></li>");
+                    }
+                %>
+        <h1 class="btn">Hello <%=Session["firstname"]%></h1>
+                
+            </ul>
+
+        </nav>
+
+    </header>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="background-color: #f8f8f8; color: #333; font-family: 'Arial', sans-serif;">
+    <link href="StyleSheet2.css" rel="stylesheet" />
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <footer>
+    <p>&copy; Sagiv Sasson All Rights Reserved.</p>
+
+</footer>
+</body>
+</html>

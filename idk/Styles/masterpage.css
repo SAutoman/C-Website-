@@ -1,0 +1,132 @@
+﻿
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+    .logo img {
+        width: 20px; /* Adjust the width as needed */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+header {
+    background-color: #4d4d4d;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #fff;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+    nav ul li {
+        display: inline;
+        margin-right: 10px;
+        margin: 0;
+    }
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+    nav a:hover {
+        color: #ffd700;
+    }
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #4d4d4d;
+    font-weight: bold;
+    color: snow;
+    padding: 14px 8px;
+    margin-left: 1px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: none;
+    position: absolute;
+    background-color: #4d4d4d;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 0 0 8px 8px;
+}
+
+    .nav-links a {
+        float: none;
+        color: #fff;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        border-bottom: 1px solid #333;
+        margin-right: 0;
+    }
+        .nav-links a:last-child {
+            margin-right: 0;
+        }
+
+.dropdown:hover .nav-links {
+    display: block;
+}
+
+.metal-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffd700;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+    .btn:hover {
+        background-color: #e6bb00;
+    }
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}

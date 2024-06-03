@@ -1,0 +1,22 @@
+﻿body {
+}
+.error-message {
+    color: red;
+}
+.error {
+    color: red;
+}
+.result.correct {
+    color: green;
+}
+
+.result.incorrect {
+    color: red;
+}
+.correct {
+    color: green;
+}
+
+.incorrect {
+    color: red;
+}
